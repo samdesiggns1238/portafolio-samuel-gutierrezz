@@ -1,0 +1,17 @@
+// Importaciones globales
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+@import 'base';
+
+// Estructura
+@import 'layout';
+
+// Componentes reutilizables
+@import 'components';
+
+// Animaciones y efectos
+@import 'animations';
+
+// Estilos responsivos
+@import 'responsive';

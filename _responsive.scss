@@ -1,0 +1,42 @@
+// _responsive.scss
+// Breakpoints para responsive design
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == phone {
+      @media (max-width: 600px) {
+        @content;
+      }
+    } @else if $breakpoint == tablet {
+      @media (max-width: 900px) {
+        @content;
+      }
+    } @else if $breakpoint == desktop {
+      @media (min-width: 901px) {
+        @content;
+      }
+    }
+  }
+  
+  // Ajustes responsivos globales
+  body {
+    @include respond-to(phone) {
+      padding: 1rem;
+    }
+  
+    @include respond-to(tablet) {
+      padding: 2rem;
+    }
+  }
+  
+  // Ajuste de navegación
+  nav ul {
+    display: flex;
+    gap: 1rem;
+  
+    @include respond-to(phone) {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+    }
+  }
+  
